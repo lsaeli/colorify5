@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Colorify</title>
+    <link rel="stylesheet" type="text/css" href="build/styling/style.css">
+    <link rel="stylesheet" type="text/css" href="build/styling/tooltips.css">
+    <link rel="stylesheet" type="text/css" href="build/styling/overlay.css">
+    <link rel="icon" href="favicon.png" type="image/x-icon" />
+    <script type="text/javascript" src="./build/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="build/js/network-interfacing.js"></script>
+    <script type="text/javascript" src="build/js/boilerplate.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i|Quicksand" rel="stylesheet">
+</head>
+
+<body>
+    <!-- /******************************************************************************/ 
+            color menu with overlay
+/***********************************************************************************/ -->
+    <!-- added font-style normal since an id/class wasn't changing the element. Otherwise the X is made italic when you click it and it shifts a few pixels-->
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" id="x" onclick="closeNav()" style="font-style: normal;">&times;</a>
+        <div class="overlay-content">
+            <!-- /******************************************************************************/ 
+                        RED
+            /***********************************************************************************/ -->
+            <div id="guideTitle">Color Guide</div>
+            <a href="javascript:void(0)" id="color-info" class="red-info">Red <span id="arrow">&#9660;</span></a>
+            <div class="color-ref" id="red" style="display: none;">
+                <span class="description">Red has the ability to rev desire; and not surprisingly when it is the color of fire, danger, and blood on one hand; and love, sexuality and passion on the other.
+                    <br><br>
+                    In India red is associated with purity, sensuality, and spirituality. On the other hand, some countries in Africa associate red with death, and in Nigeria it represents aggression and vitality. It’s considered a lucky charm in Egypt and symbolizes good fortune and courage in Iran.
+                </span>
+                <div id="symbolism">
+                    <h3>Additional Symbolism</h3>
+                    <ul>
+                        <li>- good fortune (Eastern)</li>
+                        <li>- purity (India)</li>
+                        <li>- beauty (India)</li>
+                        <li>- passion (Western)</li>
+                        <li>- strength (Middle East)</li>
+                        <li>- life (Japan)</li>
+                        <li>- triumph (Cherokee)</li>
+                        <li>- sacrifice (Hebrew)</li>
+                    </ul>
+                </div>
+                <h3>Your Selected Colors</h3>
+                <ul id="special">
+                    <div id="colorContainer" class="red"></div>
+                </ul>
+            </div>
+
+            <!-- /******************************************************************************/ 
+                        RED
+            /***********************************************************************************/ -->
+            <a href="javascript:void(0)" id="color-info" class="pink-info">Pink <span id="arrow">&#9660;</span></a>
+            <div class="color-ref" id="pink" style="display: none;">
+                <span class="description">
+                    Pink has long been (stereotypically) associated with females and is often viewed as being ‘girly.’ However, like all colors, pink is quite diverse and the level of intensity can impact its meaning. Pale pink, often marketed as the official color of little girls, represents sweetness while dusty pink can be more sentimental and light pink more romantic. At the other end of the scale, hot pink indicates youthfulness, energy, fun and excitement. A soft pink is now often referred to as 'millennial pink', for the generation's fondness for the blush tone. Soft pink interiors, graphics and more are particularly popular with Generation Y.</span>
+                <div id="symbolism">
+                    <h3>Additional Symbolism</h3>
+                    <ul>
+                        <li>- femininity (Western)</li>
+                        <li>- nurturing (Western)</li>
+                        <li>- trust (Thailand)</li>
+                        <li>- love and romance (Western)</li>
+                        <li>- masculinity (Japan)</li>
+                    </ul>
+                </div>
+                <h3>Your Selected Colors</h3>
+                <ul id="special">
+                    <div id="colorContainer" class="pink"></div>
+                </ul>
+            </div>
+            <!-- /******************************************************************************/ 
+                        orange
+            /***********************************************************************************/ -->
+            <a href="javascript:void(0)" id="color-info" class="orange-info">Orange
+                <span id="arrow">&#9660;</span>
+            </a>
+            <div class="color-ref" id="orange" style="display: none;">
+                <span class="description">Blending the warmth of red and the optimism of yellow, orange communicates activity and energy. And of course it’s hard not to go past orange as the color of, well, oranges, and all their vitamin c byproducts, which immediately makes orange feel fresh and healthy.
+                    <br><br>
+                    Orange represents autumn, harvest, warmth, and visibility in Western cultures. In Hinduism saffron (a soft orange color) is considered auspicious and sacred. In the Netherlands orange is the color of the Dutch Royal family, while it represents sexuality and fertility in Colombia. In Eastern cultures orange symbolizes love, happiness, humility, and good health. Buddhist monks’ robes are often orange.
+                </span>
+                <div id="symbolism">
+                    <h3>Additional Symbolism</h3>
+                    <ul>
+                        <li>- happiness (Eastern)</li>
+                        <li>- spirituality (Eastern)</li>
+                        <li>- Halloween (Western)</li>
+                        <li>- affordable/inexpensive items (Western)</li>
+                    </ul>
+                </div>
+                <h3>Your Selected Colors</h3>
+                <ul id="special">
+                    <div id="colorContainer" class="orange"></div>
+                </ul>
+            </div>
+            <!-- /******************************************************************************/ 
+                        yellow
+            /***********************************************************************************/ -->
+            <a href="javascript:void(0)" id="color-info" class="yellow-info">Yellow <span id="arrow">&#9660;</span></a>
+            <div class="color-ref" id="yellow" style="display: none;">
+                <span class="description">Yellow is the most visible color from a distance (which is why it’s used for street signs) and communicates cheerfulness, friendliness, joy and energy (who doesn’t need more yellow in their life?) It can also be associated with mental clarity and intellect (again, who doesn’t need more yellow?) However, yellow is also a cautionary color used in life vests, police cordoning tape and hazardous areas.
+                    <br><br>
+                    In Western cultures, yellow is associated with happiness, cheeriness, optimism, warmth (as the color of sunlight), joy, and hope, as well as caution and cowardice. In Germany, yellow represents envy, but in Egypt, it conveys happiness and good fortune.
+                </span>
+                <div id="symbolism">
+                    <h3>Additional Symbolism</h3>
+                    <ul>
+                        <li>- happiness (Western)</li>
+                        <li>- caution (Western)</li>
+                        <li>- mourning (Egypt and Burma)</li>
+                        <li>- sacred (Eastern)</li>
+                        <li>- honor (China)</li>
+                        <li>- Sadness (Greece)</li>
+                        <li>- jealousy (France)</li>
+                        <li>- Prosperity (Middle East)</li>
+                    </ul>
+                </div>
+                <h3>Your Selected Colors</h3>
+                <ul id="special">
+                    <div id="colorContainer" class="yellow"></div>
+                </ul>
+            </div>
+            <!-- /******************************************************************************/ 
+                        green
+            /***********************************************************************************/ -->
+            <a href="javascript:void(0)" id="color-info" class="green-info">Green <span id="arrow">&#9660;</span></a>
+            <div class="color-ref" id="green" style="display: none;">
+                <span class="description">Green has two very common meanings that are quite paradoxical; one being nature and the environment, and the other being finance and wealth. When it comes to nature, green represents plant life and growth and is consequently used to convey being ‘green’ in the environmental, sustainable, organic, natural sense of the word.
+                    <br><br>
+                    Green has traditionally been forbidden in Indonesia, whereas in Mexico it’s a national color that stands for independence. In the Middle East green represents fertility, luck, and wealth, and it’s considered the traditional color of Islam. In Eastern cultures green symbolizes youth, fertility, and new life, but it can also mean infidelity. In fact, in China, green hats are taboo for men because it signals that their wives have committed adultery!
+                </span>
+                <div id="symbolism">
+                    <h3>Additional Symbolism</h3>
+                    <ul>
+                        <li>- Luck (Western)</li>
+                        <li>- new life (Eastern)</li>
+                        <li>- Eternal Life (Japan)</li>
+                        <li>- corruption (North Africa)</li>
+                        <li>- death (South America)</li>
+                    </ul>
+                </div>
+                <h3>Your Selected Colors</h3>
+                <ul id="special">
+                    <div id="colorContainer" class="green"></div>
+                </ul>
+            </div>
+            <!-- /******************************************************************************/ 
+                        blue
+            /***********************************************************************************/ -->
+            <a href="javascript:void(0)" id="color-info" class="blue-info">Blue <span id="arrow">&#9660;</span></a>
+            <div class="color-ref" id="blue" style="display: none;">
+                <span class="description">Blue is calming and harmonious qualities being associated with the sea and sky. However, being associated with the emotional feeling of being ‘blue’ it is also used to express sadness or depression.
+                    <br><br>
+                    In some countries, blue symbolizes healing and evil repellence. Blue eye-shaped amulets, believed to protect against the evil eye, are common sights in Turkey, Greece, Iran, Afghanistan, and Albania. In Eastern cultures, blue symbolizes immortality, while in Ukraine it denotes good health. In Hinduism blue is strongly associated with Krishna, who embodies love and divine joy.
+                </span>
+                <div id="symbolism">
+                    <h3>Additional Symbolism</h3>
+                    <ul>
+                        <li>- authority (Western)</li>
+                        <li>- immortality (Eastern)</li>
+                        <li>- mourning (Korea)</li>
+                        <li>- defeat, trouble (Cherokee)</li>
+                        <li>- mourning, trust, serenity (Mexico)</li>
+                        <li>- protection (Middle East and Egypt)</li>
+                    </ul>
+                </div>
+                <h3>Your Selected Colors</h3>
+                <ul id="special">
+                    <div id="colorContainer" class="blue"></div>
+                </ul>
+            </div>
+            <!-- /******************************************************************************/ 
+                        purple
+            /***********************************************************************************/ -->
+            <a href="javascript:void(0)" id="color-info" class="purple-info">Purple <span id="arrow">&#9660;</span></a>
+            <div class="color-ref" id="purple" style="display: none;">
+                <span class="description">Purple is a low arousal color. It is traditionally associated with royalty, majesty or nobility as well as having a spiritual or mysterious quality. Darker shades often represent luxury or opulence while lighter lavender shades are quite feminine, sentimental and even nostalgic.
+                    <br><br>
+                    Historically in Japan only the highest ranked Buddhist monks wore purple robes. Purple is also associated with piety and faith, and in Catholicism, penitence. However, in Brazil and Thailand purple is the color of mourning. It’s also a color of honor — the Purple Heart is the oldest military award still given to US military members.
+                </span>
+                <div id="symbolism">
+                    <h3>Additional Symbolism</h3>
+                    <ul>
+                        <li>- royalty (Western)</li>
+                        <li>- sorrow, comforting (India)</li>
+                        <li>- wealth (Japan)</li>
+                        <li>- mourning (Brazil and Catholicism)</li>
+                    </ul>
+                </div>
+                <h3>Your Selected Colors</h3>
+                <ul id="special">
+                    <div id="colorContainer" class="purple"></div>
+                </ul>
+            </div>
+            <!-- /******************************************************************************/ 
+                        brown
+            /***********************************************************************************/ -->
+            <a href="javascript:void(0)" id="color-info" class="brown-info">Brown <span id="arrow">&#9660;</span></a>
+            <div class="color-ref" id="brown" style="display: none;">
+                <span class="description">Brown gets a lot of use in this era of organic and natural food, beauty and products. Nature inspired it represents a feeling of wholesomeness, orderliness, and being grounded. It is simple, strong, durable and honest and may express that your brand has better things to care about than superfluous color, when really… (mind trick!).</span>
+                <div id="symbolism">
+                    <h3>Additional Symbolism</h3>
+                    <ul>
+                        <li>- practicality, stable, dependable (Western)</li>
+                        <li>- mourning (India)</li>
+                        <li>- disapproval (Nicaragua)</li>
+                    </ul>
+                </div>
+                <h3>Your Selected Colors</h3>
+                <ul id="special">
+                    <div id="colorContainer" class="brown"></div>
+                </ul>
+            </div>
+            <!-- /******************************************************************************/ 
+                        black
+            /***********************************************************************************/ -->
+            <a href="javascript:void(0)" id="color-info" class="black-info">Black <span id="arrow">&#9660;</span></a>
+            <div class="color-ref" id="black" style="display: none;">
+                <span class="description">While color is more likely to increase brand recognition there’s no reason black—when used appropriately—can’t be just as distinctive, memorable and communicative of a brand’s attributes. Black is to be taken seriously. It represents power, luxury, sophistication and exclusivity on one hand; and death, evil and mystery on the other. From formality to mourning to power, black is bold, classic and not to be fooled with.
+                    <br><br>
+                    In many cultures black symbolizes sophistication and formality, but it also represents death, evil, mourning, magic, fierceness, illness, bad luck, and mystery. In the Middle East black can represent both rebirth and mourning. In Africa it symbolizes age, maturity, and masculinity.
+                </span>
+                <div id="symbolism">
+                    <h3>Additional Symbolism</h3>
+                    <ul>
+                        <li>- power, control (Western)</li>
+                        <li>- wealth, health, prosperity (Eastern)</li>
+                        <li>- evil, anger, negativity (India)</li>
+                        <li>- mystery, night (Jpaan)</li>
+                        <li>- unhappiness, evil (Thailand)</li>
+                        <li>- age, wisdom (Africa)</li>
+                    </ul>
+                </div>
+                <h3>Your Selected Colors</h3>
+                <ul id="special">
+                    <div id="colorContainer" class="black"></div>
+                </ul>
+            </div>
+            <!-- /******************************************************************************/ 
+                        white
+/***********************************************************************************/ -->
+            <a href="javascript:void(0)" id="color-info" class="white-info">White <span id="arrow">&#9660;</span></a>
+            <div class="color-ref" id="white" style="display: none;">
+                <span class="description">White represents simplicity, purity, innocence and perfection. And if you had to identify one brand that has used white to convey its brand message to perfection it would have to be Apple – white represents the simplicity of the products in both their form and function. White also comes with a starkness or sterility about it, which is often used be designers to convey a minimalist aesthetic and clean, modern quality.
+                    <br><br>
+                    In Western cultures, white symbolizes purity, elegance, peace, and cleanliness; brides traditionally wear white dresses at their weddings. But in China, Korea, and some other Asian countries white represents death, mourning, and bad luck, and is traditionally worn at funerals. In Peru, white is associated with angels, good health, and time.
+                </span>
+                <div id="symbolism">
+                    <h3>Additional Symbolism</h3>
+                    <ul>
+                        <li>- peace, purity, cleanliness (Western)</li>
+                        <li>- death, mourning (Eastern)</li>
+                        <li>- misfortune (China)</li>
+                        <li>- unhappiness, peace, funerals (India)</li>
+                        <li>- purity (Middle East)</li>
+                    </ul>
+                </div>
+                <h3>Your Selected Colors</h3>
+                <ul id="special">
+                    <div id="colorContainer" class="white"></div>
+                </ul>
+            </div>
+            <a href="javascript:void(0)" id="color-info" class="undefined-info">Undefined <span id="arrow">&#9660;</span></a>
+            <div class="color-ref" id="undefined" style="display: none;">
+                <span class="description">What does this mean to you?
+                </span>
+                <div id="symbolism">
+                    <h3>Additional Symbolism</h3>
+                </div>
+                <h3>Your Selected Posts</h3>
+                <ul id="special">
+                    <div id="colorContainer" class="undefined"></div>
+                </ul>
+            </div><br><br>
+            <!-- /******************************************************************************/ 
+            end of menu
+/***********************************************************************************/ -->
+        </div>
+    </div>
+    <!-- /******************************************************************************/ 
+           sidebar
+/***********************************************************************************/ -->
+    <div id="sidebar">
+        <!-- /************ color guide, its tooltip ***************************/  -->
+        <span id="colorGuide" onclick="openNav()">
+            <div class="tooltip2">
+                <span class="tooltiptext2" style="font-family: quicksand, sans-serif; font-size: 14px;margin-left: 40px; top: 12px;height: 61px;">Click to open color guide</span>
+                <!-- /********************  hamburger  ****************************************/ ---->
+                <div id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <!-- end of tooltip div -->
+            </div>
+            <!-- end of color guide span -->
+        </span>
+        <!-- /********************  install icon + its tooltip  ****************************************/ ---->
+        <!-- /********************  tooltip3  ****************************************/ ---->
+        <div class="tooltip4">
+            <span class="tooltiptext4" style="font-family: quicksand, sans-serif; font-size: 14px; margin-left: 23px; height: 61px;">Installation page</span>
+            <div id="install-icon" class="sidebar-icons">
+                <a id="symbol" style="" href="https://paper.dropbox.com/doc/Colorify--AafiqA3EvoBpC0VSu2gRybDLAg-vEhtku9JpVaNYiiNh9qSt"><span>
+                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 44.06">
+                            <defs>
+                                <style>.cls-5{fill:#deb887;}</style>
+                            </defs>
+                            <path class="cls-5" d="M24.78,2.94A2,2,0,0,0,23,5V28.69l-3.59-3.6A2,2,0,0,0,16,26.68a2.06,2.06,0,0,0,.61,1.26l7,7L25,36.34l1.41-1.4,7-7A2,2,0,0,0,30.65,25l-.06.05L27,28.69V5a2,2,0,0,0-2-2h-.25ZM2,36v5.69a5.28,5.28,0,0,0,1.5,3.9A5.64,5.64,0,0,0,7.44,47H42.59A5,5,0,0,0,48,41.59V36H44v5.59c0,.74-.16,1-.28,1.13s-.39.28-1.13.28H7.44a1.65,1.65,0,0,1-1.16-.28c-.12-.12-.28-.31-.28-1V36Z" transform="translate(-2 -2.94)" />
+                        </svg></span></a>
+            </div>
+            <!-- /********************  end of tooltip3 div  ****************************************/ ---->
+        </div>
+        <div id="colorLabels" style="margin-left: -3px;">
+            <div class="tooltipSort">
+                <span class="tooltiptextSort" style="margin-top: 17px;">
+                    <p id="colorTitle">Red</p>
+                </span>
+                <button id="sortRed" class="colorSort" href="" style="background-color: red;"></button>
+                <!-- /********************  end of tooltipRed div  ****************************************/ ---->
+            </div>
+            <div class="tooltipSort">
+                <span class="tooltiptextSort" style="margin-top:54px;">
+                    <p id="colorTitle">Pink</p>
+                </span>
+                <button id="sortPink" class="colorSort" style="background-color: pink;"></button>
+                <!-- /********************  end of tooltipRed div  ****************************************/ ---->
+            </div>
+            <div class="tooltipSort">
+                <span class="tooltiptextSort" style="margin-top:90px;">
+                    <p id="colorTitle">Orange</p>
+                </span>
+                <button id="sortOrange" class="colorSort" href="" style="background-color: orange;"></button>
+                <!-- /********************  end of tooltipRed div  ****************************************/ ---->
+            </div>
+            <div class="tooltipSort">
+                <span class="tooltiptextSort" style="margin-top:128px;">
+                    <p id="colorTitle">Yellow</p>
+                </span>
+                <button id="sortYellow" class="colorSort" href="" style="background-color: yellow;"></button>
+                <!-- /********************  end of tooltipRed div  ****************************************/ ---->
+            </div>
+            <div class="tooltipSort" style="m">
+                <span class="tooltiptextSort" style="margin-top:165px;">
+                    <p id="colorTitle">Green</p>
+                </span>
+                <button id="sortGreen" class="colorSort" href="" style="background-color: green;"></button>
+                <!-- /********************  end of tooltipRed div  ****************************************/ ---->
+            </div>
+            <div class="tooltipSort">
+                <span class="tooltiptextSort" style="margin-top: 201px;">
+                    <p id="colorTitle">Blue</p>
+                </span>
+                <button id="sortBlue" class="colorSort" href="" style="background-color: blue;"></button>
+                <!-- /********************  end of tooltipRed div  ****************************************/ ---->
+            </div>
+            <div class="tooltipSort">
+                <span class="tooltiptextSort" style="margin-top:239px;">
+                    <p id="colorTitle">Purple</p>
+                </span>
+                <button id="sortPurple" class="colorSort" href="" style="background-color: purple;"></button>
+                <!-- /********************  end of tooltipRed div  ****************************************/ ---->
+            </div>
+            <div class="tooltipSort">
+                <span class="tooltiptextSort" style="margin-top:275px;">
+                    <p id="colorTitle">Brown</p>
+                </span>
+                <button id="sortBrown" class="colorSort" href="" style="background-color: brown;"></button>
+                <!-- /********************  end of tooltipRed div  ****************************************/ ---->
+            </div>
+            <div class="tooltipSort">
+                <span class="tooltiptextSort" style="margin-top:312px;">
+                    <p id="colorTitle">Black</p>
+                </span>
+                <button id="sortBlack" class="colorSort" href="" style="background-color: black;"></button>
+                <!-- /********************  end of tooltipRed div  ****************************************/ ---->
+            </div>
+            <div class="tooltipSort">
+                <span class="tooltiptextSort" style="margin-top:349px;">
+                    <p id="colorTitle">White</p>
+                </span>
+                <button id="sortWhite" class="colorSort" href="" style="background-color: #f9f8f8;"></button>
+                <!-- /********************  end of tooltipRed div  ****************************************/ ---->
+            </div>
+
+            <!-- div wraps none filter -->
+            <div class="tooltipSort">
+                <span class="tooltiptextSort" style="margin-top:386px;">
+                    <p id="colorTitle">Undefined</p>
+                    <!-- // div to wrap none filter -->
+                    <!-- make this an "x" -->
+                </span>
+                <button id="sortNone" class="colorSort" href="" style="background-color: white;">X</button>
+                <!-- /********************  end of tooltipRed div  ****************************************/ ---->
+            </div>
+            <!-- /********************  end of colorLabels div  ****************************************/ ---->
+        </div>
+        <!-- /********************  end of sidebar div  ****************************************/ ---->
+    </div>
+    <br><br><br>
+    <!-- /******************************************************************************/ 
+            column1
+/***********************************************************************************/ -->
+    
+<div id="container">
+    <div id="col1">
+        <div class="rightColumn">
+            <div id="profile">
+                <div id="central_list"></div>
+            </div>
+        </div>
+        <hr><br>
+        <!-- your posts: -->
+        <div id="posts"></div>
+    </div>
+</div>
+    <br><br>
+
+
+    <!-- interface for if you want to post: -->
+    <div id="post_interface"></div>
+    <!-- /******************************************************************************/ 
+            begin javascript
+/***********************************************************************************/ -->
+    <script type="text/javascript">
+
+
+    /************************************************************************************/
+    // color guide toggle menu
+    /***********************************************************************************/
+    $('body').on('click', '#red-info', function() {
+        $('#red').toggle();
+    })
+
+    $('body').on('click', '#pink-info', function() {
+        $('#pink').toggle();
+    })
+
+    $('body').on('click', '#orange-info', function() {
+        $('#orange').toggle();
+    })
+
+    $('body').on('click', '#yellow-info', function() {
+        $('#yellow').toggle();
+    })
+
+    $('body').on('click', '#green-info', function() {
+        $('#green').toggle();
+    })
+
+    $('body').on('click', '#blue-info', function() {
+        $('#blue').toggle();
+    })
+
+    $('body').on('click', '#purple-info', function() {
+        $('#purple').toggle();
+    })
+
+    $('body').on('click', '#brown-info', function() {
+        $('#brown').toggle();
+    })
+
+    $('body').on('click', '#black-info', function() {
+        $('#black').toggle();
+    })
+
+    $('body').on('click', '#white-info', function() {
+        $('#white').toggle();
+    })
+
+    $('body').on('click', '#undefined-info', function() {
+        $('#undefined').toggle();
+    })
+
+
+    /************************************************************************************/
+    // ready hamburger
+    /***********************************************************************************/
+
+    // $(document).ready(function() {
+    //     $("button").click(function() {
+    //         $("div").animate({ left: '250px' });
+    //     });
+    // });
+
+    /************************************************************************************/
+    // open color menu and its overlay
+    /***********************************************************************************/
+    function openNav() {
+        document.getElementById("myNav").style.width = "100%";
+    }
+
+    function closeNav() {
+        document.getElementById("myNav").style.width = "0%";
+    }
+    </script>
+</body>
+
+</html>

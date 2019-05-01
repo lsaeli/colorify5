@@ -1,0 +1,23 @@
+Part 1
+
+Take the first part of class to reflect on your interface’s design and functionality and answer the following questions in a post to the network:
+
+1. What is the goal of your interface? What content does it privilege? Does it emphasize your posts, or the network’s? How?
+
+The goal of the interface is to highlight the feature of being able to custiomise the color of ones post based on color theory principles. It privileges the users own posts or anyone who adds a post, This section takes up the most screen real estate.
+
+2. What parts of your design do you find most resolved? What areas feel unresolved?
+
+The hamburger menu with the color information is most resolve. I also like that the color picker populates in a separate window. The features listed at the bottom and the
+pre-set colors on the left hand vertical menu still need some updating.
+ 
+3. Which designed feature did you implement? How does it fit into the overall design of your interface?
+
+Im still unclear about this question but no other users features have been incorporated.
+
+4. What are the technical constraints of your interface?
+Are there any bugs? Do they impede on the interface’s baseline functionality?
+
+No ability to see other users posts or list of other users. Escape out of color definition modal definitely impedes the baseline functionality the most.
+
+

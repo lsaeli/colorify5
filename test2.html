@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+</head>
+<body>
+	<style type="text/css">
+		/* Just setting .displayNone */
+ .displayNone {
+    display: none;
+}
+	</style>
+
+<!-- Here's your template -->
+<div class="displayNone" id="colorContainer">
+    <!-- This id (colorList) is important -->
+    <div id="colorList">Result</div>
+</div>
+<!-- Container for the listContainer -->
+<div id="listContainer"></div>
+</body>
+
+<script type="text/javascript">
+	//Get the number of listContainer.  
+//This can be sent from your API or however you're getting the data.
+//For example, in PHP you would set this to $query->num_rows();
+var count = 11;
+
+//Load up an empty variable to contain all the listContainer.
+var html = '';
+
+//Start a for loop to clone the template element (div#colorList) into div#listContainer 'count' times.
+//This will repeat until the number of records (count) has been reached.
+for (i = 1; i <= count; i++) {
+
+    //Increment each result to our html variable.
+    html += $('#colorContainer').html();
+}
+
+//Append the listContainer all at once, minimizing reflows.
+$('#listContainer').append(html);
+</script>
+</html>

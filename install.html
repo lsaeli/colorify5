@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Install</title>
+    <link rel="stylesheet" type="text/css" href="build/style.css">
+    <link rel="stylesheet" type="text/css" href="build/install.css">
+    <link rel="icon" href="favicon.png" type="image/x-icon" />
+    <script type="text/javascript" src="build/network-interfacing.js"></script>
+    <script type="text/javascript" src="./build/jquery-3.3.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i|Quicksand" rel="stylesheet">
+</head>
+<body>
+
+    <div id="sidebar" style="padding-top: 150px;
+	margin-left: -35px;">
+        <a id="backButton" href="./index.html">&#8617;</a>
+    </div>
+    
+<div id="col1">
+	<div id="guideTitle">Colorify Guide</div>
+	    <h1>Introduction</h1>
+	    <h2>Install instructions</h2>
+	    <p>Download files (colorify.js and colorify.css) <a id="download" href="">here</a></p>
+	    <h2>Syntax</h2>
+	    <h2>References</h2>
+   
+
+    <div id="indent">
+    	<div id="list">
+	        <li>
+	        	<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/color">- Mozilla: Web Colors</a></li>
+	        <li>
+	        	<a href="https://appendto.com/2017/02/rgb-to-hex-understanding-the-major-web-color-codes/">- RGB to Hex Web Colors</a></li>
+	        <li><a href=""></a></li>
+        </div>
+    </div>
+    
+
+
+
+<a href="javascript:void(0)" class="guide" id="faq">FAQ <span id="arrowFAQ">&#9660;</span></a>
+
+	<li id="questions">	
+		<a href="javascript:void(0)" class="ref" id="benefits"><span id="subhead">Feature Benefits <span id="arrowFAQ">&#9660;</span></span>
+
+			<div class="ref" id="answers">
+				<span id="description" style="display: none;">Organzing your posts for ease of use and greater personalization of your network page.
+				</span>
+			</div>
+
+		</a>
+
+
+
+				<a href="javascript:void(0)" class="ref2" id="test"><span id="subhead">Test <span id="arrowFAQ">&#9660;</span></span>
+
+			<div class="ref" id="answers">
+				<span id="description2" style="display: none;">Organzing your posts for ease of use and greater personalization of your network page.
+				</span>
+			</div>
+
+		</a>
+	</li>
+
+
+
+	<li id="question2">	
+		<a href="javascript:void(0)" class="ref" id="usage"><span id="subhead">Usage <span id="arrowFAQ">&#9660;</span></span>
+
+			<div class="ref" id="answer2">
+				<span id="description2" style="display: none;">Organzing your posts for ease of use and greater personalization of your network page.
+				</span>
+			</div>
+		</a>
+	</li>
+
+		    
+
+<!-- <a href="javascript:void(0)" class="guide" id="faq2">Test <span id="arrowFAQ">&#9660;</span></a>
+
+	<li id="questions">	
+		<a href="javascript:void(0)" class="ref" id="benefits"><span id="subhead">Feature Benefits <span id="arrowFAQ">&#9660;</span></span>
+
+			<div class="ref" id="answers">
+				<span id="description" style="display: none;">Organzing your posts for ease of use and greater personalization of your network page.
+				</span>
+			</div>
+		</a>
+	</li>
+
+ -->
+
+
+<!-- <a href="javascript:void(0)" class="guide" id="faq">FAQ <span id="arrowFAQ">&#9660;</span></a>
+	<li id="question2">	
+		<a href="javascript:void(0)" class="ref2" id="usage"><span id="subhead">Usage <span id="arrowFAQ">&#9660;</span></span>
+
+			<div class="ref" id="answer2">
+				<span id="description2" style="display: none;">Organzing your posts for ease of use and greater personalization of your network page.
+				</span>
+			</div>
+		</a>
+
+
+	</li>
+ -->
+
+
+
+
+		   
+
+    
+
+    <h2>FAQ</h2>
+    <div id="indent">
+        <h2>Q: What benefit does your feature offer?</h2>
+        	<p>Organzing your posts for ease of use and greater personalization of your network page.</p>
+        	<p>Clicking on the color tags in the Color Guide also brings you to its associated post.</p>
+        
+        <h2>Q: How is it used?</h2>
+        	<p>Install</p>
+       
+        <h2>Q: How is it installed?</h2>
+        	<p></p>
+       
+        <h2>Q: Is it customizable (if so, how do you show this?)?</h2>
+        	<p>Yes. You can add custom colors to your posts (entire RGB range). You can also edit the code and change/add your personal color definitions.</p>
+        
+
+        <h2>Default Colors</h2>
+        	<li>- red</li>
+        	<li>- pink</li>
+        	<li>- orange</li>
+        	<li>- yellow</li>
+        	<li>- green</li>
+        	<li>- blue</li>
+        	<li>- purple</li>
+        	<li>- brown</li>
+        	<li>- black</li>
+        	<li>- white</li>
+        	<li>- undefined</li>
+        	<br>
+        
+        <p>To add more colors, place this code in the JS:</p>
+        	<code class="highlighter-rouge">$('body').on('click','#yourColor-info', function(){
+            $('#yourColor').toggle();
+            })
+        </code>
+        	<br>
+        	
+        	<p>To add more colors, place this code in the HTML (remove spaces after the < sign):</p> 
+
+
+         <code class="highlighter-rouge">
+${postAndArchive.post.colors}</code>
+
+
+
+
+         <code class="highlighter-rouge">
+    var postContent = {
+      "title" : formTitle,
+      "timestamp" : timestamp,
+      "content" : formContents,
+      "colors" : formColors
+    }
+
+</code>
+
+
+
+
+
+
+
+
+            <code class="highlighter-rouge">
+                < a href="javascript:void(0)" class="color-info" id="red-info">Red < span id="arrow">& #9660;</span></a>
+                        < div class="color-ref" id="red" style="display: none;">
+                            </code>
+                            <code class="highlighter-rouge">
+                                colorContainer.insertAdjacentHTML("beforeend", `
+                                <br>
+                                < li id="colorList">
+                                    < a href="./posts/post-${ postAndArchive.post.timestamp}.json" id="hexColorLink" class=${showColors} style="color:${postAndArchive.post.colors};">${postAndArchive.post.colors}</a>
+                                        </li>
+                                        `)
+                                        <br><br><br>
+                                        postContainer.insertAdjacentHTML( "beforeend", `
+                                        <br>
+                                        < h2>$ {postAndArchive.post.title}</h2>
+                                            < h4 id="timestamp">$ {postAndArchive.post.timestamp}</h4>
+                                                <br>
+                                                <p>$ { postAndArchive.post.content} <br> </p>
+                                                < p id="hexColor" class=${showColors} style="color:$ {postAndArchive.post.colors};">$ {postAndArchive.post.colors}</p>
+        <br><br><br>
+        <hr>
+        `)
+        </code>
+        <code class="highlighter-rouge">
+            let showColors = postAndArchive.post.colors == undefined ? "hidden" : "colors"</code>
+        <code class="highlighter-rouge">
+            <p>colorContainer under postContainer in JS</p>
+            colorContainer = document.getElementById("colorContainer")
+        </code>
+        <h2>Javascript</h2>
+        <div id="indent">
+            <li><code class="highlighter-rouge">color-info</code> = parent class</li>
+            
+            <li><code class="highlighter-rouge">red-info</code> = selector for that particular color</li>
+            
+            <li><code class="highlighter-rouge">red</code> = selector for that particular color description. There's ones for orange, yellow, etc.</li>
+            
+            <li><code class="highlighter-rouge">color-ref</code> = selector for that particular color description</li>
+            <br><br>
+            
+            <h3>colorWell</h3>
+            <li><code class="highlighter-rouge">showColors</code> = selector for </li>
+            <h3>hexColor</h3>
+            <li><code class="highlighter-rouge">hexColor</code> = selection for color tag in vanilla page (not menu overlay)</li>
+            <h3>hexColorLink</h3>
+            <li><code class="highlighter-rouge">hexColorLink</code> = selector for JSON file post</li>
+            <h3>showColors</h3>
+            <li><code class="highlighter-rouge">showColors</code> = JS to display color tags. Can hide undefined tags along with acting as a selectable class</li>
+        </div>
+        
+
+
+        <h2>CSS</h2>
+        <div id="indent">
+            <h2>color-guide</h2>
+            <p>the hamburger overlay</p>
+            <h3>colorContainer</h3>
+            <li><code class="highlighter-rouge">special</code> = container for colorContainer</li>
+            <li><code class="highlighter-rouge">colorContainer</code> = selector for where the color tags are held in color-guide</li>
+            <h3>Tooltips</h3>
+            <li><code class="highlighter-rouge">tooltip</code> = selector for colorWell</li>
+            <li><code class="highlighter-rouge">tooltip2</code> = selector for color-guide</li>
+            <li><code class="highlighter-rouge">tooltip3</code> = selector for install-icon</li>
+            <h3>Other tools</h3>
+            <li><code class="highlighter-rouge">description</code> = selector for color description</li>
+            <li><code class="highlighter-rouge">symbol</code> = tunnelling to select info-icon</li>
+            <li><code class="highlighter-rouge">rightColumn</code> = selection for profile and central list</li>
+        </div>
+</div>
+
+</body>
+<script type="text/javascript" src="./build/toggle.js"></script>
+
+</html>

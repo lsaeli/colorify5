@@ -1,0 +1,491 @@
+
+<!-- saved from url=(0044)http://www.javascripter.net/faq/rgbtohex.htm -->
+<html class="gr__javascripter_net"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="KEYWORDS" content="HTML color converter,javascript color converter,hexadecimal converter,rgb to hex,rgb-to-hex,rgb to hexadecimal,color converter,rgbtohex,rgb2hex">
+<title>RGB-to-Hex Color Converter</title>
+
+<script src="./RGB-to-Hex Color Converter_files/cb=gapi.loaded_1" async=""></script><script src="./RGB-to-Hex Color Converter_files/ca-pub-5507865760857847.js"></script><script src="./RGB-to-Hex Color Converter_files/cb=gapi(1).loaded_0" async=""></script><script language="JavaScript" type="text/javascript">
+<!--
+function rgbToHex(R,G,B) { return toHex(R)+toHex(G)+toHex(B); }
+function toHex(n) {
+ n = parseInt(n,10);
+ if (isNaN(n)) return "00";
+ n = Math.max(0,Math.min(n,255));
+ return "0123456789ABCDEF".charAt((n-n%16)/16)
+      + "0123456789ABCDEF".charAt(n%16);
+}
+
+function cutHex(h) { return (h.charAt(0)=="#") ? h.substring(1,7) : h}
+function hexToR(h) { return parseInt((cutHex(h)).substring(0,2),16) }
+function hexToG(h) { return parseInt((cutHex(h)).substring(2,4),16) }
+function hexToB(h) { return parseInt((cutHex(h)).substring(4,6),16) }
+
+function setBgColorById(id,sColor) {
+ var elem;
+ if (document.getElementById) {
+  if (elem=document.getElementById(id)) {
+   if (elem.style) elem.style.backgroundColor=sColor;
+  }
+ }
+}
+
+img1 = new Image(); img1.src = '1.gif';
+img2 = new Image(); img2.src = '2.gif';
+
+function toggleDiv(n) {
+ var curState, el=document.getElementById('explanation'+n);
+ if (el==null) return;
+ if (el.style) {
+  curState = el.style.visibility;
+  if (curState == 'hidden') {
+   el.style.visibility = 'visible';
+   el.style.display    = 'inline';
+  }
+  else {
+   el.style.visibility = 'hidden';
+   el.style.display    = 'none';
+  }
+ }
+ el=document.getElementById('i'+n);
+ if (el==null) return;
+ if (el.src) {
+  if ((el.src).indexOf('1.gif')!=-1)
+       el.src=img2.src;
+  else el.src=img1.src;
+ }
+}
+//-->
+</script>
+
+<!-- Google plus-one button -->
+<script type="text/javascript" src="./RGB-to-Hex Color Converter_files/plusone.js" gapi_processed="true">
+</script>
+
+<link rel="preload" href="./RGB-to-Hex Color Converter_files/f.txt" as="script"><script type="text/javascript" src="./RGB-to-Hex Color Converter_files/f.txt"></script><link rel="preload" href="http://pagead2.googlesyndication.com/pagead/js/r20190327/r20190131/show_ads_impl.js" as="script"></head>
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#660099" data-gr-c-s-loaded="true">
+<a name="top"></a>
+
+<script type="text/javascript"><!--
+google_ad_client = "pub-5507865760857847";
+/* 728x90_20101016 */
+google_ad_slot = "7989268040";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript" src="./RGB-to-Hex Color Converter_files/f(1).txt">
+</script><ins id="aswift_0_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;" data-ad-slot="7989268040"><ins id="aswift_0_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><iframe width="728" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0px;width:728px;height:90px;" src="./RGB-to-Hex Color Converter_files/saved_resource.html"></iframe></ins></ins>
+
+<p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody><tr><td valign="top" width="566">
+
+<h3><font face="Verdana,Arial,Helvetica,sans-serif" color="#000099">
+RGB-to-Hex Conversion
+</font></h3>
+
+<!-- navlinks -->
+<table border="0" cellpadding="1" cellspacing="1">
+<tbody><tr><td valign="top"><nobr><font face="Arial,Helvetica"><small><img border="0" width="9" height="9" src="./RGB-to-Hex Color Converter_files/bt.gif">
+
+<script>if(self==top)document.write('<a target=_top href="index.htm">Contents</a> |')
+else document.write('<a target=_top href="'+self.location.pathname+'">Hide Contents</a> |')
+</script><a target="_top" href="http://www.javascripter.net/faq/index.htm">Contents</a> |
+
+<a href="http://www.javascripter.net/faq/startpag.htm">JavaScript FAQ</a> |
+<a href="http://www.javascripter.net/faq/colors.htm">JavaScript Colors FAQ</a>
+</small></font></nobr></td><td valign="baseline">&nbsp;</td><td valign="baseline" width="99"><div id="___plusone_0" style="position: absolute; width: 450px; left: -10000px;"><iframe ng-non-bindable="" frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position:absolute;top:-10000px;width:450px;margin:0px;border-style:none" tabindex="0" vspace="0" width="100%" id="I0_1553972691844" name="I0_1553972691844" src="./RGB-to-Hex Color Converter_files/fastbutton.html" data-gapiattached="true"></iframe></div><g:plusone size="medium" data-gapiscan="true" data-onload="true" data-gapistub="true"></g:plusone></td>
+</tr></tbody></table>
+<!-- navlinks end -->
+
+<p>
+<b>Question:</b> How do I convert RGB values of a color to a hexadecimal string? 
+
+</p><p style="width:566px;">
+<b>Answer:</b> 
+The RGB-to-hexadecimal converter algorithm is simple: make sure that your 
+<nobr><code>R</code>, <code>G</code>, <code>B</code> (<i>red, green, blue</i>)</nobr> 
+values are in the range 0...255,
+convert <code>R</code>, <code>G</code>, <code>B</code> to hex strings,
+and then concatenate the three hex strings together.
+Convert RGB to Hex color values here:
+
+
+</p><form name="rgb">
+<table border="0" cellpadding="1" cellspacing="1">
+<tbody><tr>
+<td valign="middle" title="Color sample for input RGB values"><nobr><span id="colorSample" style="border: 1px solid gray;"><big><big><code style="cursor:default;">&nbsp;&nbsp;&nbsp;</code></big></big></span></nobr></td>
+<td valign="top"><nobr>&nbsp;
+R:<input type="text" name="r" size="3" maxlength="3" value="255" style="width:33px;" onfocus="this.form.hex.value=&#39;&#39;" onblur="sNewColor=rgbToHex(this.form.r.value,this.form.g.value,this.form.b.value);setBgColorById(&#39;colorSample&#39;,sNewColor);">
+G:<input type="text" name="g" size="3" maxlength="3" value="255" style="width:33px;" onfocus="this.form.hex.value=&#39;&#39;" onblur="sNewColor=rgbToHex(this.form.r.value,this.form.g.value,this.form.b.value);setBgColorById(&#39;colorSample&#39;,sNewColor);">
+B:<input type="text" name="b" size="3" maxlength="3" value="255" style="width:33px;" onfocus="this.form.hex.value=&#39;&#39;" onblur="sNewColor=rgbToHex(this.form.r.value,this.form.g.value,this.form.b.value);setBgColorById(&#39;colorSample&#39;,sNewColor);">
+<input type="button" name="btn" value="Convert to Hex" onclick="sNewColor=rgbToHex(this.form.r.value,this.form.g.value,this.form.b.value);this.form.hex.value=sNewColor;setBgColorById(&#39;colorSample&#39;,sNewColor);">
+<input type="text" name="hex" size="8"></nobr>
+
+</td><td>&nbsp;</td><td valign="top" width="99"><div id="___plusone_1" style="position: absolute; width: 450px; left: -10000px;"><iframe ng-non-bindable="" frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position:absolute;top:-10000px;width:450px;margin:0px;border-style:none" tabindex="0" vspace="0" width="100%" id="I1_1553972691850" name="I1_1553972691850" src="./RGB-to-Hex Color Converter_files/fastbutton(1).html" data-gapiattached="true"></iframe></div><g:plusone size="medium" data-gapiscan="true" data-onload="true" data-gapistub="true"></g:plusone></td>
+</tr></tbody></table>
+
+</form>
+
+<p><nobr><font face="Arial,Helvetica,sans-serif" size="2"><img id="i32" src="./RGB-to-Hex Color Converter_files/2.gif" alt="Source code" title="Source code" onclick="toggleDiv(32)">
+<a href="http://www.javascripter.net/faq/rgbtohex.htm#" onclick="toggleDiv(32);return false;">Source code</a> |
+See also 
+<a href="http://www.javascripter.net/faq/hextorgb.htm">Hex-to-RGB</a> | 
+<a href="http://www.javascripter.net/faq/rgb2cmyk.htm">RGB-to-CMYK</a> | 
+<a href="http://www.javascripter.net/faq/rgb2hsv.htm">RGB-to-HSV</a> | 
+<a href="http://www.javascripter.net/faq/colornam.htm">Color names</a>
+
+</font></nobr>
+
+</p><div id="explanation32" style="display:none;visibility:hidden;">
+<pre>function rgbToHex(R,G,B) {return toHex(R)+toHex(G)+toHex(B)}
+function toHex(n) {
+ n = parseInt(n,10);
+ if (isNaN(n)) return "00";
+ n = Math.max(0,Math.min(n,255));
+ return "0123456789ABCDEF".charAt((n-n%16)/16)
+      + "0123456789ABCDEF".charAt(n%16);
+}
+</pre>
+
+<b>Notes:</b> The script parses the input <code>R</code>, <code>G</code>, <code>B</code> values
+as integers using the standard function 
+<code><a href="http://www.javascripter.net/faq/convert2.htm#parseInt">parseInt(<i>string</i>,10)</a></code>;
+the second, optional argument <code>10</code> specifies that the value must be parsed as
+a decimal number. (If we omit the <code>10</code>, the script would still work,
+except for some input values starting with <code>0</code>, e.g. <code>009</code> or <code>011</code>,
+where it might incorrectly assume <a href="http://www.javascripter.net/faq/octalsan.htm">octal</a> input.) 
+<nobr>We use</nobr> the standard functions
+<code><a href="http://www.javascripter.net/faq/mathfunc.htm">Math.min</a></code> and <code><a href="http://www.javascripter.net/faq/mathfunc.htm">Math.max</a></code>
+to make sure that the input values are within the range from 0 to 255.
+The interested reader might notice that a nicer way to convert <code>n</code> to a hexadecimal string
+is to use <a href="http://www.javascripter.net/faq/convert3.htm"><code>n.toString(16)</code></a>; however, the above code was written
+back in the ancient era when JavaScript 1.0 was still around, and the construct 
+<a href="http://www.javascripter.net/faq/convert3.htm"><code>n.toString(16)</code></a> won't work in JavaScript 1.0!
+<br></div>
+
+<p>
+<script language="JavaScript">
+<!--
+function printTable (tableCells,tableWidth) {
+ var hCode, M, tableRows=Math.ceil(tableCells.length/tableWidth);
+ var tableBuf='<table border=0 cellspacing=1 cellpadding=1>\n';
+ for (var K=0;K<tableRows;K++) {
+  tableBuf+='<tr>';
+  for (var L=0;L<tableWidth;L++) {
+   M=K+L*tableRows;
+   hCode = tableCells[M].substring(0,7);
+   tableBuf+='<td style="cursor:default;" bgcolor="'+hCode+'" title="'+tableCells[M]+'"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td>'
+   +'<td><nobr><code>&nbsp;rgb('+hexToR(hCode)+','+hexToG(hCode)+','+hexToB(hCode)+')&nbsp;</code></nobr></td>'
+   +'<td><nobr><code>'+((M<tableCells.length)? hCode:'')+'&nbsp;&nbsp;&nbsp;</code></nobr></td>'
+  }
+  tableBuf+='</tr>\n';
+ }
+ document.writeln(tableBuf+'</table>');
+}
+
+
+theColors=new Array(
+ '#FFFFFF white'
+,'#F5FFFA mintcream'
+,'#F0FFFF azure'
+,'#F0FFF0 honeydew'
+,'#E0FFFF lightcyan'
+,'#F0F8FF aliceblue'
+,'#F5F5F5 whitesmoke'
+,'#F8F8FF ghostwhite'
+,'#FFFFF0 ivory'
+,'#FFFAFA snow'
+,'#FFFAF0 floralwhite'
+,'#FFF5EE seashell'
+,'#FDF5E6 oldlace' 
+,'#FFF0F5 lavenderblush'
+,'#FAF0E6 linen' 
+,'#FAEBD7 antiquewhite'
+,'#FFE4E1 mistyrose' 
+
+,'#FFC0CB pink'
+,'#FFB6C1 lightpink' 
+,'#FF69B4 hotpink'
+,'#FF1493 deeppink'
+,'#DB7093 palevioletred'
+,'#BC8F8F rosybrown'
+,'#C71585 mediumvioletred' 
+
+,'#CD5C5C indianred'
+,'#F08080 lightcoral' 
+,'#FFA07A lightsalmon' 
+,'#FA8072 salmon'
+,'#E9967A darksalmon'
+,'#DC143C crimson'
+
+,'#FFF8DC cornsilk'
+,'#FFEBCD blanchedalmond'
+,'#FFE4C4 bisque'
+,'#FFDEAD navajowhite'
+,'#F5DEB3 wheat'
+,'#DEB887 burlywood'
+,'#D2B48C tan'
+,'#BDB76B darkkhaki'
+,'#DAA520 goldenrod'
+,'#B8860B darkgoldenrod'
+,'#CD853F peru'
+,'#D2691E chocolate'
+,'#A0522D sienna'
+,'#A52A2A brown'
+,'#B22222 firebrick'
+,'#8B4513 saddlebrown'
+,'#8B0000 darkred'
+,'#800000 maroon'
+
+,'#FAA460 sandybrown'
+,'#FF7F50 coral'
+,'#FF6347 tomato'
+,'#FF0000 red'
+,'#FF4500 orangered'
+,'#FF8C00 darkorange'
+,'#FFA500 orange'
+
+,'#FFD700 gold'
+,'#FFFF00 yellow'
+,'#FFFFE0 lightyellow' 
+,'#FFFACD lemonchiffon'
+,'#FAFAD2 lightgoldenrodyellow'
+,'#F5F5DC beige'
+,'#FFEFD5 papayawhip'
+,'#FFE4B5 moccasin' 
+,'#FFDAB9 peachpuff'
+,'#EEE8AA palegoldenrod'
+,'#F0E68C khaki'
+
+,'#E6E6FA lavender'
+,'#D8BFD8 thistle'
+,'#DDA0DD plum'
+// ,'#FF00FF fuchsia' // same as magenta
+,'#FF00FF magenta' 
+,'#EE82EE violet'
+,'#DA70D6 orchid'
+,'#BA55D3 mediumorchid' 
+,'#9370DB mediumpurple' 
+,'#8A2BE2 blueviolet'
+,'#9400D3 darkviolet'
+,'#9932CC darkorchid'
+,'#8B008B darkmagenta'
+,'#800080 purple'
+,'#4B0082 indigo'
+,'#483D8B darkslateblue'
+,'#6A5ACD slateblue'
+,'#7B68EE mediumslateblue' 
+
+,'#98FB98 palegreen'
+,'#ADFF2F greenyellow'
+,'#7FFF00 chartreuse'
+,'#7CFC00 lawngreen'
+,'#00FF00 lime' 
+,'#00FF7F springgreen'
+,'#00FA9A mediumspringgreen' 
+,'#90EE90 lightgreen' 
+,'#32CD32 limegreen' 
+,'#3CB371 mediumseagreen' 
+,'#2E8B57 seagreen'
+,'#228B22 forestgreen'
+,'#008000 green'
+,'#006400 darkgreen'
+,'#9ACD32 yellowgreen'
+,'#6B8E23 olivedrab'
+,'#808000 olive'
+,'#556B2F darkolivegreen'
+,'#8FBC8F darkseagreen'
+,'#66CDAA mediumaquamarine'
+,'#20B2AA lightseagreen' 
+,'#008B8B darkcyan'
+,'#008080 teal'
+
+//,'#00FFFF aqua'  // same as cyan
+,'#00FFFF cyan'
+,'#7FFFD4 aquamarine'
+,'#AFEEEE paleturquoise'
+,'#40E0D0 turquoise'
+,'#48D1CC mediumturquoise'
+,'#00CED1 darkturquoise'
+,'#5F9EA0 cadetblue'
+,'#4682B4 steelblue'
+,'#B0C4DE lightsteelblue'
+,'#B0E0E6 powderblue'
+,'#ADD8E6 lightblue'
+,'#87CEEB skyblue'
+,'#87CEFA lightskyblue' 
+,'#00BFFF deepskyblue'
+,'#1E90FF dodgerblue'
+,'#6495ED cornflowerblue'
+,'#4169E1 royalblue'
+,'#0000FF blue'
+,'#0000CD mediumblue' 
+,'#00008B darkblue'
+,'#000080 navy' 
+,'#191970 midnightblue'
+
+,'#DCDCDC gainsboro'
+,'#D3D3D3 lightgrey' 
+,'#C0C0C0 silver'
+,'#A9A9A9 darkgray'
+,'#778899 lightslategray' 
+,'#708090 slategray'
+,'#808080 gray'
+,'#696969 dimgray'
+,'#2F4F4F darkslategray'
+,'#000000 black'
+);
+
+function sortOrder(s1,s2) {
+ if (s1.substring(8) > s2.substring(8)) return  1;
+ if (s1.substring(8) < s2.substring(8)) return -1;
+ return 0;
+}
+
+//-->
+</script>
+
+</p><p>
+<b>RGB/hex codes</b> for <a href="http://www.javascripter.net/faq/colornam.htm">named colors</a> supported in most browsers are listed below:
+
+</p><p>
+<script language="JavaScript">
+printTable(theColors,2);
+</script><table border="0" cellspacing="1" cellpadding="1">
+<tbody><tr><td style="cursor:default;" bgcolor="#FFFFFF" title="#FFFFFF white"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(255,255,255)&nbsp;</code></nobr></td><td><nobr><code>#FFFFFF&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#FF00FF" title="#FF00FF magenta"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(255,0,255)&nbsp;</code></nobr></td><td><nobr><code>#FF00FF&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#F5FFFA" title="#F5FFFA mintcream"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(245,255,250)&nbsp;</code></nobr></td><td><nobr><code>#F5FFFA&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#EE82EE" title="#EE82EE violet"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(238,130,238)&nbsp;</code></nobr></td><td><nobr><code>#EE82EE&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#F0FFFF" title="#F0FFFF azure"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(240,255,255)&nbsp;</code></nobr></td><td><nobr><code>#F0FFFF&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#DA70D6" title="#DA70D6 orchid"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(218,112,214)&nbsp;</code></nobr></td><td><nobr><code>#DA70D6&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#F0FFF0" title="#F0FFF0 honeydew"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(240,255,240)&nbsp;</code></nobr></td><td><nobr><code>#F0FFF0&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#BA55D3" title="#BA55D3 mediumorchid"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(186,85,211)&nbsp;</code></nobr></td><td><nobr><code>#BA55D3&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#E0FFFF" title="#E0FFFF lightcyan"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(224,255,255)&nbsp;</code></nobr></td><td><nobr><code>#E0FFFF&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#9370DB" title="#9370DB mediumpurple"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(147,112,219)&nbsp;</code></nobr></td><td><nobr><code>#9370DB&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#F0F8FF" title="#F0F8FF aliceblue"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(240,248,255)&nbsp;</code></nobr></td><td><nobr><code>#F0F8FF&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#8A2BE2" title="#8A2BE2 blueviolet"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(138,43,226)&nbsp;</code></nobr></td><td><nobr><code>#8A2BE2&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#F5F5F5" title="#F5F5F5 whitesmoke"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(245,245,245)&nbsp;</code></nobr></td><td><nobr><code>#F5F5F5&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#9400D3" title="#9400D3 darkviolet"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(148,0,211)&nbsp;</code></nobr></td><td><nobr><code>#9400D3&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#F8F8FF" title="#F8F8FF ghostwhite"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(248,248,255)&nbsp;</code></nobr></td><td><nobr><code>#F8F8FF&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#9932CC" title="#9932CC darkorchid"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(153,50,204)&nbsp;</code></nobr></td><td><nobr><code>#9932CC&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#FFFFF0" title="#FFFFF0 ivory"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(255,255,240)&nbsp;</code></nobr></td><td><nobr><code>#FFFFF0&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#8B008B" title="#8B008B darkmagenta"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(139,0,139)&nbsp;</code></nobr></td><td><nobr><code>#8B008B&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#FFFAFA" title="#FFFAFA snow"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(255,250,250)&nbsp;</code></nobr></td><td><nobr><code>#FFFAFA&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#800080" title="#800080 purple"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(128,0,128)&nbsp;</code></nobr></td><td><nobr><code>#800080&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#FFFAF0" title="#FFFAF0 floralwhite"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(255,250,240)&nbsp;</code></nobr></td><td><nobr><code>#FFFAF0&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#4B0082" title="#4B0082 indigo"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(75,0,130)&nbsp;</code></nobr></td><td><nobr><code>#4B0082&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#FFF5EE" title="#FFF5EE seashell"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(255,245,238)&nbsp;</code></nobr></td><td><nobr><code>#FFF5EE&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#483D8B" title="#483D8B darkslateblue"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(72,61,139)&nbsp;</code></nobr></td><td><nobr><code>#483D8B&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#FDF5E6" title="#FDF5E6 oldlace"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(253,245,230)&nbsp;</code></nobr></td><td><nobr><code>#FDF5E6&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#6A5ACD" title="#6A5ACD slateblue"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(106,90,205)&nbsp;</code></nobr></td><td><nobr><code>#6A5ACD&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#FFF0F5" title="#FFF0F5 lavenderblush"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(255,240,245)&nbsp;</code></nobr></td><td><nobr><code>#FFF0F5&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#7B68EE" title="#7B68EE mediumslateblue"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(123,104,238)&nbsp;</code></nobr></td><td><nobr><code>#7B68EE&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#FAF0E6" title="#FAF0E6 linen"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(250,240,230)&nbsp;</code></nobr></td><td><nobr><code>#FAF0E6&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#98FB98" title="#98FB98 palegreen"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(152,251,152)&nbsp;</code></nobr></td><td><nobr><code>#98FB98&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#FAEBD7" title="#FAEBD7 antiquewhite"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(250,235,215)&nbsp;</code></nobr></td><td><nobr><code>#FAEBD7&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#ADFF2F" title="#ADFF2F greenyellow"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(173,255,47)&nbsp;</code></nobr></td><td><nobr><code>#ADFF2F&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#FFE4E1" title="#FFE4E1 mistyrose"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(255,228,225)&nbsp;</code></nobr></td><td><nobr><code>#FFE4E1&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#7FFF00" title="#7FFF00 chartreuse"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(127,255,0)&nbsp;</code></nobr></td><td><nobr><code>#7FFF00&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#FFC0CB" title="#FFC0CB pink"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(255,192,203)&nbsp;</code></nobr></td><td><nobr><code>#FFC0CB&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#7CFC00" title="#7CFC00 lawngreen"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(124,252,0)&nbsp;</code></nobr></td><td><nobr><code>#7CFC00&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#FFB6C1" title="#FFB6C1 lightpink"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(255,182,193)&nbsp;</code></nobr></td><td><nobr><code>#FFB6C1&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#00FF00" title="#00FF00 lime"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(0,255,0)&nbsp;</code></nobr></td><td><nobr><code>#00FF00&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#FF69B4" title="#FF69B4 hotpink"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(255,105,180)&nbsp;</code></nobr></td><td><nobr><code>#FF69B4&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#00FF7F" title="#00FF7F springgreen"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(0,255,127)&nbsp;</code></nobr></td><td><nobr><code>#00FF7F&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#FF1493" title="#FF1493 deeppink"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(255,20,147)&nbsp;</code></nobr></td><td><nobr><code>#FF1493&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#00FA9A" title="#00FA9A mediumspringgreen"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(0,250,154)&nbsp;</code></nobr></td><td><nobr><code>#00FA9A&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#DB7093" title="#DB7093 palevioletred"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(219,112,147)&nbsp;</code></nobr></td><td><nobr><code>#DB7093&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#90EE90" title="#90EE90 lightgreen"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(144,238,144)&nbsp;</code></nobr></td><td><nobr><code>#90EE90&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#BC8F8F" title="#BC8F8F rosybrown"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(188,143,143)&nbsp;</code></nobr></td><td><nobr><code>#BC8F8F&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#32CD32" title="#32CD32 limegreen"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(50,205,50)&nbsp;</code></nobr></td><td><nobr><code>#32CD32&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#C71585" title="#C71585 mediumvioletred"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(199,21,133)&nbsp;</code></nobr></td><td><nobr><code>#C71585&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#3CB371" title="#3CB371 mediumseagreen"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(60,179,113)&nbsp;</code></nobr></td><td><nobr><code>#3CB371&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#CD5C5C" title="#CD5C5C indianred"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(205,92,92)&nbsp;</code></nobr></td><td><nobr><code>#CD5C5C&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#2E8B57" title="#2E8B57 seagreen"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(46,139,87)&nbsp;</code></nobr></td><td><nobr><code>#2E8B57&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#F08080" title="#F08080 lightcoral"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(240,128,128)&nbsp;</code></nobr></td><td><nobr><code>#F08080&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#228B22" title="#228B22 forestgreen"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(34,139,34)&nbsp;</code></nobr></td><td><nobr><code>#228B22&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#FFA07A" title="#FFA07A lightsalmon"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(255,160,122)&nbsp;</code></nobr></td><td><nobr><code>#FFA07A&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#008000" title="#008000 green"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(0,128,0)&nbsp;</code></nobr></td><td><nobr><code>#008000&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#FA8072" title="#FA8072 salmon"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(250,128,114)&nbsp;</code></nobr></td><td><nobr><code>#FA8072&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#006400" title="#006400 darkgreen"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(0,100,0)&nbsp;</code></nobr></td><td><nobr><code>#006400&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#E9967A" title="#E9967A darksalmon"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(233,150,122)&nbsp;</code></nobr></td><td><nobr><code>#E9967A&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#9ACD32" title="#9ACD32 yellowgreen"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(154,205,50)&nbsp;</code></nobr></td><td><nobr><code>#9ACD32&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#DC143C" title="#DC143C crimson"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(220,20,60)&nbsp;</code></nobr></td><td><nobr><code>#DC143C&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#6B8E23" title="#6B8E23 olivedrab"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(107,142,35)&nbsp;</code></nobr></td><td><nobr><code>#6B8E23&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#FFF8DC" title="#FFF8DC cornsilk"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(255,248,220)&nbsp;</code></nobr></td><td><nobr><code>#FFF8DC&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#808000" title="#808000 olive"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(128,128,0)&nbsp;</code></nobr></td><td><nobr><code>#808000&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#FFEBCD" title="#FFEBCD blanchedalmond"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(255,235,205)&nbsp;</code></nobr></td><td><nobr><code>#FFEBCD&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#556B2F" title="#556B2F darkolivegreen"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(85,107,47)&nbsp;</code></nobr></td><td><nobr><code>#556B2F&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#FFE4C4" title="#FFE4C4 bisque"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(255,228,196)&nbsp;</code></nobr></td><td><nobr><code>#FFE4C4&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#8FBC8F" title="#8FBC8F darkseagreen"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(143,188,143)&nbsp;</code></nobr></td><td><nobr><code>#8FBC8F&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#FFDEAD" title="#FFDEAD navajowhite"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(255,222,173)&nbsp;</code></nobr></td><td><nobr><code>#FFDEAD&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#66CDAA" title="#66CDAA mediumaquamarine"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(102,205,170)&nbsp;</code></nobr></td><td><nobr><code>#66CDAA&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#F5DEB3" title="#F5DEB3 wheat"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(245,222,179)&nbsp;</code></nobr></td><td><nobr><code>#F5DEB3&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#20B2AA" title="#20B2AA lightseagreen"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(32,178,170)&nbsp;</code></nobr></td><td><nobr><code>#20B2AA&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#DEB887" title="#DEB887 burlywood"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(222,184,135)&nbsp;</code></nobr></td><td><nobr><code>#DEB887&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#008B8B" title="#008B8B darkcyan"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(0,139,139)&nbsp;</code></nobr></td><td><nobr><code>#008B8B&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#D2B48C" title="#D2B48C tan"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(210,180,140)&nbsp;</code></nobr></td><td><nobr><code>#D2B48C&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#008080" title="#008080 teal"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(0,128,128)&nbsp;</code></nobr></td><td><nobr><code>#008080&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#BDB76B" title="#BDB76B darkkhaki"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(189,183,107)&nbsp;</code></nobr></td><td><nobr><code>#BDB76B&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#00FFFF" title="#00FFFF cyan"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(0,255,255)&nbsp;</code></nobr></td><td><nobr><code>#00FFFF&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#DAA520" title="#DAA520 goldenrod"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(218,165,32)&nbsp;</code></nobr></td><td><nobr><code>#DAA520&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#7FFFD4" title="#7FFFD4 aquamarine"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(127,255,212)&nbsp;</code></nobr></td><td><nobr><code>#7FFFD4&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#B8860B" title="#B8860B darkgoldenrod"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(184,134,11)&nbsp;</code></nobr></td><td><nobr><code>#B8860B&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#AFEEEE" title="#AFEEEE paleturquoise"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(175,238,238)&nbsp;</code></nobr></td><td><nobr><code>#AFEEEE&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#CD853F" title="#CD853F peru"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(205,133,63)&nbsp;</code></nobr></td><td><nobr><code>#CD853F&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#40E0D0" title="#40E0D0 turquoise"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(64,224,208)&nbsp;</code></nobr></td><td><nobr><code>#40E0D0&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#D2691E" title="#D2691E chocolate"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(210,105,30)&nbsp;</code></nobr></td><td><nobr><code>#D2691E&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#48D1CC" title="#48D1CC mediumturquoise"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(72,209,204)&nbsp;</code></nobr></td><td><nobr><code>#48D1CC&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#A0522D" title="#A0522D sienna"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(160,82,45)&nbsp;</code></nobr></td><td><nobr><code>#A0522D&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#00CED1" title="#00CED1 darkturquoise"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(0,206,209)&nbsp;</code></nobr></td><td><nobr><code>#00CED1&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#A52A2A" title="#A52A2A brown"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(165,42,42)&nbsp;</code></nobr></td><td><nobr><code>#A52A2A&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#5F9EA0" title="#5F9EA0 cadetblue"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(95,158,160)&nbsp;</code></nobr></td><td><nobr><code>#5F9EA0&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#B22222" title="#B22222 firebrick"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(178,34,34)&nbsp;</code></nobr></td><td><nobr><code>#B22222&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#4682B4" title="#4682B4 steelblue"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(70,130,180)&nbsp;</code></nobr></td><td><nobr><code>#4682B4&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#8B4513" title="#8B4513 saddlebrown"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(139,69,19)&nbsp;</code></nobr></td><td><nobr><code>#8B4513&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#B0C4DE" title="#B0C4DE lightsteelblue"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(176,196,222)&nbsp;</code></nobr></td><td><nobr><code>#B0C4DE&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#8B0000" title="#8B0000 darkred"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(139,0,0)&nbsp;</code></nobr></td><td><nobr><code>#8B0000&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#B0E0E6" title="#B0E0E6 powderblue"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(176,224,230)&nbsp;</code></nobr></td><td><nobr><code>#B0E0E6&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#800000" title="#800000 maroon"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(128,0,0)&nbsp;</code></nobr></td><td><nobr><code>#800000&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#ADD8E6" title="#ADD8E6 lightblue"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(173,216,230)&nbsp;</code></nobr></td><td><nobr><code>#ADD8E6&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#FAA460" title="#FAA460 sandybrown"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(250,164,96)&nbsp;</code></nobr></td><td><nobr><code>#FAA460&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#87CEEB" title="#87CEEB skyblue"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(135,206,235)&nbsp;</code></nobr></td><td><nobr><code>#87CEEB&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#FF7F50" title="#FF7F50 coral"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(255,127,80)&nbsp;</code></nobr></td><td><nobr><code>#FF7F50&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#87CEFA" title="#87CEFA lightskyblue"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(135,206,250)&nbsp;</code></nobr></td><td><nobr><code>#87CEFA&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#FF6347" title="#FF6347 tomato"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(255,99,71)&nbsp;</code></nobr></td><td><nobr><code>#FF6347&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#00BFFF" title="#00BFFF deepskyblue"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(0,191,255)&nbsp;</code></nobr></td><td><nobr><code>#00BFFF&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#FF0000" title="#FF0000 red"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(255,0,0)&nbsp;</code></nobr></td><td><nobr><code>#FF0000&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#1E90FF" title="#1E90FF dodgerblue"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(30,144,255)&nbsp;</code></nobr></td><td><nobr><code>#1E90FF&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#FF4500" title="#FF4500 orangered"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(255,69,0)&nbsp;</code></nobr></td><td><nobr><code>#FF4500&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#6495ED" title="#6495ED cornflowerblue"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(100,149,237)&nbsp;</code></nobr></td><td><nobr><code>#6495ED&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#FF8C00" title="#FF8C00 darkorange"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(255,140,0)&nbsp;</code></nobr></td><td><nobr><code>#FF8C00&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#4169E1" title="#4169E1 royalblue"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(65,105,225)&nbsp;</code></nobr></td><td><nobr><code>#4169E1&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#FFA500" title="#FFA500 orange"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(255,165,0)&nbsp;</code></nobr></td><td><nobr><code>#FFA500&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#0000FF" title="#0000FF blue"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(0,0,255)&nbsp;</code></nobr></td><td><nobr><code>#0000FF&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#FFD700" title="#FFD700 gold"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(255,215,0)&nbsp;</code></nobr></td><td><nobr><code>#FFD700&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#0000CD" title="#0000CD mediumblue"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(0,0,205)&nbsp;</code></nobr></td><td><nobr><code>#0000CD&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#FFFF00" title="#FFFF00 yellow"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(255,255,0)&nbsp;</code></nobr></td><td><nobr><code>#FFFF00&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#00008B" title="#00008B darkblue"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(0,0,139)&nbsp;</code></nobr></td><td><nobr><code>#00008B&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#FFFFE0" title="#FFFFE0 lightyellow"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(255,255,224)&nbsp;</code></nobr></td><td><nobr><code>#FFFFE0&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#000080" title="#000080 navy"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(0,0,128)&nbsp;</code></nobr></td><td><nobr><code>#000080&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#FFFACD" title="#FFFACD lemonchiffon"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(255,250,205)&nbsp;</code></nobr></td><td><nobr><code>#FFFACD&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#191970" title="#191970 midnightblue"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(25,25,112)&nbsp;</code></nobr></td><td><nobr><code>#191970&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#FAFAD2" title="#FAFAD2 lightgoldenrodyellow"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(250,250,210)&nbsp;</code></nobr></td><td><nobr><code>#FAFAD2&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#DCDCDC" title="#DCDCDC gainsboro"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(220,220,220)&nbsp;</code></nobr></td><td><nobr><code>#DCDCDC&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#F5F5DC" title="#F5F5DC beige"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(245,245,220)&nbsp;</code></nobr></td><td><nobr><code>#F5F5DC&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#D3D3D3" title="#D3D3D3 lightgrey"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(211,211,211)&nbsp;</code></nobr></td><td><nobr><code>#D3D3D3&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#FFEFD5" title="#FFEFD5 papayawhip"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(255,239,213)&nbsp;</code></nobr></td><td><nobr><code>#FFEFD5&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#C0C0C0" title="#C0C0C0 silver"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(192,192,192)&nbsp;</code></nobr></td><td><nobr><code>#C0C0C0&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#FFE4B5" title="#FFE4B5 moccasin"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(255,228,181)&nbsp;</code></nobr></td><td><nobr><code>#FFE4B5&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#A9A9A9" title="#A9A9A9 darkgray"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(169,169,169)&nbsp;</code></nobr></td><td><nobr><code>#A9A9A9&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#FFDAB9" title="#FFDAB9 peachpuff"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(255,218,185)&nbsp;</code></nobr></td><td><nobr><code>#FFDAB9&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#778899" title="#778899 lightslategray"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(119,136,153)&nbsp;</code></nobr></td><td><nobr><code>#778899&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#EEE8AA" title="#EEE8AA palegoldenrod"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(238,232,170)&nbsp;</code></nobr></td><td><nobr><code>#EEE8AA&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#708090" title="#708090 slategray"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(112,128,144)&nbsp;</code></nobr></td><td><nobr><code>#708090&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#F0E68C" title="#F0E68C khaki"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(240,230,140)&nbsp;</code></nobr></td><td><nobr><code>#F0E68C&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#808080" title="#808080 gray"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(128,128,128)&nbsp;</code></nobr></td><td><nobr><code>#808080&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#E6E6FA" title="#E6E6FA lavender"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(230,230,250)&nbsp;</code></nobr></td><td><nobr><code>#E6E6FA&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#696969" title="#696969 dimgray"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(105,105,105)&nbsp;</code></nobr></td><td><nobr><code>#696969&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#D8BFD8" title="#D8BFD8 thistle"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(216,191,216)&nbsp;</code></nobr></td><td><nobr><code>#D8BFD8&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#2F4F4F" title="#2F4F4F darkslategray"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(47,79,79)&nbsp;</code></nobr></td><td><nobr><code>#2F4F4F&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+<tr><td style="cursor:default;" bgcolor="#DDA0DD" title="#DDA0DD plum"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(221,160,221)&nbsp;</code></nobr></td><td><nobr><code>#DDA0DD&nbsp;&nbsp;&nbsp;</code></nobr></td><td style="cursor:default;" bgcolor="#000000" title="#000000 black"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td><td><nobr><code>&nbsp;rgb(0,0,0)&nbsp;</code></nobr></td><td><nobr><code>#000000&nbsp;&nbsp;&nbsp;</code></nobr></td></tr>
+</tbody></table>
+
+
+
+</p><p>
+<b>See also:</b><br>
+
+<table border="0" cellspacing="1" cellpadding="1"><tbody><tr>
+<td><nobr>• <a href="http://www.javascripter.net/faq/colors.htm">JavaScript Colors FAQ</a></nobr>
+<br><nobr>• <a href="http://www.javascripter.net/faq/hextorgb.htm">Hex to RGB</a> color converter</nobr>
+<br><nobr>• <a href="http://www.javascripter.net/faq/hex2cmyk.htm">Hex to CMYK</a> color converter</nobr>
+<br><nobr>• <a href="http://www.javascripter.net/faq/rgb2cmyk.htm">RGB to CMYK</a> color converter &nbsp;</nobr>
+<br><nobr>• <a href="http://www.javascripter.net/faq/rgb2hsv.htm">RGB to HSV</a> color converter</nobr>
+</td>
+
+<td><nobr>• <a href="http://www.javascripter.net/faq/backgrou.htm">Changing the page background color</a></nobr>
+<br><nobr>• <a href="http://www.javascripter.net/faq/changehtmlelementcolor.htm">Changing the color of HTML elements</a></nobr>
+<br><nobr>• <a href="http://www.javascripter.net/faq/colornam.htm">Predefined color names</a> (alphabetical list)</nobr>
+<br><nobr>• <a href="http://www.javascripter.net/faq/stylesd.htm">Applying another stylesheet to my page</a></nobr>
+<br><nobr>• <a href="http://www.javascripter.net/faq/stylesc.htm">Changing the mouse cursor style</a></nobr>
+</td>
+</tr></tbody></table>
+
+
+</p></td>
+
+<td valign="top">
+
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-5507865760857847";
+/* 160x600_20110328 */
+google_ad_slot = "2729105170";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript" src="./RGB-to-Hex Color Converter_files/f(1).txt">
+</script><ins id="aswift_1_expand" style="display:inline-table;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:160px;background-color:transparent;" data-ad-slot="2729105170"><ins id="aswift_1_anchor" style="display:block;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:160px;background-color:transparent;"><iframe width="160" height="600" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;border:0px;width:160px;height:600px;" src="./RGB-to-Hex Color Converter_files/saved_resource(1).html"></iframe></ins></ins>
+
+</td>
+</tr>
+</tbody></table>
+
+
+<!--Page content ends here; don't delete this comment.-->
+
+</p><p>
+<script type="text/javascript"><!--
+google_ad_client = "pub-5507865760857847";
+/* 728x90_20101016 */
+google_ad_slot = "7989268040";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript" src="./RGB-to-Hex Color Converter_files/f(1).txt">
+</script><ins id="aswift_2_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;" data-ad-slot="7989268040"><ins id="aswift_2_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><iframe width="728" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_2" name="aswift_2" style="left:0;position:absolute;top:0;border:0px;width:728px;height:90px;" src="./RGB-to-Hex Color Converter_files/saved_resource(2).html"></iframe></ins></ins>
+
+</p><p>
+<font size="2" face="Arial,Helvetica,sans-serif">
+<a href="http://www.javascripter.net/faq/legal.htm">Copyright</a>
+© 1999-2012, <a target="_top" href="http://www.javascripter.net/">JavaScripter.net</a>.
+</font>
+
+
+
+</p><iframe name="oauth2relay2082948750" id="oauth2relay2082948750" src="./RGB-to-Hex Color Converter_files/postmessageRelay.html" tabindex="-1" aria-hidden="true" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe></body><iframe id="google_shimpl" style="display: none;" src="./RGB-to-Hex Color Converter_files/saved_resource(3).html"></iframe><iframe id="google_esf" name="google_esf" src="./RGB-to-Hex Color Converter_files/zrt_lookup.html" data-ad-client="ca-pub-5507865760857847" style="display: none;"></iframe></html>
